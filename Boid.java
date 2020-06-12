@@ -13,7 +13,7 @@ public class Boid {
 		position = new Vector2D(x, y);	
 	}
 
-	void run(ArrayList<Boid> boids) {
+	public void run(ArrayList<Boid> boids) {
 		
 	}
 }

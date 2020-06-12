@@ -2,12 +2,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 
+@SuppressWarnings("serial")
 public class Main extends Frame {
-	Flock flock;
+	Flock flock = new Flock();
 
 
 	public static void main(String args[]) {
-		new Main();
+		new Main();	
 	}
 
 	public Main (){
@@ -21,19 +22,25 @@ public class Main extends Frame {
 				System.exit(0);
 			}       	
 		});
+		//flock.addBoid(new Boid(2, 2));
+		//flock.addBoid(new Boid(50, 60));
+		addBoids();
+	}
 
+	public void addBoids() {
 		Random rand = new Random();
 
 		for(int i = 0; i < 5; i++) {
-			flock.addBoid(new Boid(rand.nextInt(400), rand.nextInt(400)));
+			Boid boid = new Boid(i * 2, i * 2);
+			flock.addBoid(boid); 
 		}
 	}
 
 	public void paint(Graphics g) {
-		Graphics2D g2d = (Graphics2D)g;
-	       	g2d.setColor(Color.blue);
-		g2d.drawRect(75, 75, 300, 200);	
-		flock.run();
+		super.paint(g);
+	       	g.setColor(Color.blue);
+		g.drawRect(75, 75, 300, 200);	
+	//	flock.run();
 	}
 }
 

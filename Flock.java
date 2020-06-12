@@ -1,23 +1,23 @@
 import java.util.ArrayList;
 
 public class Flock {
-        ArrayList<Boid> boids; 
+        ArrayList<Boid> boids = new ArrayList<>(); 
 	Main m;
 
 	public Flock() {
-		boids = new ArrayList<Boid>();
+		//boids = new ArrayList<Boid>();
 	}
 
-	void run() {
+	public void run() {
 		for(Boid b : boids) {
 			b.run(boids);
 		}	
 	}
 
-	void addBoid(Boid b) {
+	public void addBoid(Boid b) {
 		boids.add(b);
 	}
 
-	void render() {
+	public void render() {
 	}
 }	
