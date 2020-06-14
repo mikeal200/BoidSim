@@ -4,7 +4,7 @@ import java.util.Random;
 
 @SuppressWarnings("serial")
 public class Main extends Frame {
-	Flock flock = new Flock();
+	public Flock flock = new Flock();
 
 
 	public static void main(String args[]) {
@@ -39,7 +39,11 @@ public class Main extends Frame {
 	public void paint(Graphics g) {
 		super.paint(g);
 	       	g.setColor(Color.blue);
-		g.drawRect(75, 75, 300, 200);	
+		g.drawRect(75, 75, 300, 200);
+		for(Boid b : flock.boids) {
+		
+			g.drawRect((int)b.position.x, (int)b.position.y, 20, 20);
+		}
 	//	flock.run();
 	}
 }

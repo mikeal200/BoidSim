@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Boid {
-	Vector2D position;
+	public Vector2D position;
 	Vector2D velocity;
   	Vector2D acceleration;
   	float r;
