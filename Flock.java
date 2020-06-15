@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Flock {
         public ArrayList<Boid> boids = new ArrayList<>(); 
-	Main m;
+	public Main m;
 
 	public Flock() {
 		//boids = new ArrayList<Boid>();
